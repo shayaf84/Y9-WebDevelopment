@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>
+		Feb 26. Exercise
+	</title>
+
+	<style>
+
+		body {
+
+			background-color: Azure;
+			font-family: Verdana;
+			margin: 0;
+			font-size: 18px;
+		}
+
+		h1 {
+
+			text-align: center;
+		}
+
+
+		nav {
+			
+			overflow: hidden;
+			background-color: DodgerBlue;
+			margin: 0px;
+			z-index: 1;
+		}
+
+
+
+		nav a{
+
+			float: left;
+			color: white;
+			font-size: 20pt;
+			font-family: Roboto;
+			text-align: center;
+			padding: 14px 16px;
+			margin: 0px;
+			text-decoration: none;
+
+			
+		}
+
+		nav a:hover {
+
+
+			background-color: Blue;
+  			color: white;
+    		text-decoration: none;
+
+
+		}
+
+		h3 {
+			text-align: center;
+
+		}
+
+
+
+		div.container {
+			
+			width: 33%;
+			display: flex;
+			flex-direction: column;
+			
+			align-content: center;
+			margin: auto;
+			flex-wrap: wrap;
+			background-color: white;
+			padding: 20px;
+			border-radius: 50px;
+			
+
+
+		}
+
+		button {
+			
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			margin: auto;
+			flex-wrap: wrap;
+			
+			padding: 10px;
+			
+		}
+
+		textarea {
+			border: none;
+			border-bottom: 1px solid;
+			height: 25px;
+			font-size: 18px;
+		}
+
+		img {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			margin: auto;
+			flex-wrap: wrap;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<h1> Word Counter</h1>
+
+
+	<nav id="navbar">
+  	
+  		<a href="tipcalculator.html"> Tip Calculator </a>
+  		<a href = wordchar.html> Counter </a>
+  		<a href = "areaofcircle.html"> Circle </a>
+  		
+  	</nav>
+  	<br>
+	<h3> Here you are able to enter text, and have the program return the number of characters and words </h3>
+	
+	<div class="container">
+		<div>
+			<textarea id="wordinput">  </textarea>
+		</div>
+		<br>
+		<a href="https://www.grammarly.com/blog/what-is-concise-writing/"> How to keep text concise </a> <br><br>
+		<button onclick="count_words()"> Submit </button>
+		<br>
+		<div id = "charoutput"> </div>		
+		<br>
+		<div id = "wordoutput"> </div><br>
+		<img src="question.jpeg" alt="question" width = "165" height = "165">	
+	</div>
+
+</body>
+
+
+<script>
+	function count_words() {
+		var input = document.getElementById("wordinput").value;
+		var output = document.getElementById("charoutput");
+		var word_output = document.getElementById("wordoutput");
+		var char = input.length;
+		var words = input.split(" ");
+		output.innerHTML = "Characters: " + char;
+		word_output.innerHTML = "Words: " + words.length;
+
+
+
+
+	}
+</script>
+
+
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+		Tip Calculator
+
+	</title>
+
+
+	<style>
+
+
+
+		
+		div.container {
+			
+			width: 33%;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			margin: auto;
+			flex-wrap: wrap;
+			background-color: white;
+			padding: 20px;
+			border-radius: 50px
+
+
+		}
+
+		body {
+			background-color: LavenderBlush;
+			font-size: 18px;
+			margin: 0;
+			font-family: Verdana;
+		}
+
+		h1 {
+
+			text-align: center;
+		}
+
+		input {
+			border: none;
+			border-bottom: 1px solid;
+			height: 25px;
+			font-size: 18px;
+		}
+		
+		select {
+			font-size: 18px;
+		}
+
+		nav {
+			
+			overflow: hidden;
+			background-color: DodgerBlue;
+			margin: 0px;
+			z-index: 1;
+		}
+
+
+
+		nav a{
+
+			float: left;
+			color: white;
+			font-size: 20pt;
+			font-family: Roboto;
+			text-align: center;
+			padding: 14px 16px;
+			margin: 0px;
+			text-decoration: none;
+
+			
+		}
+
+		nav a:hover {
+
+
+			background-color: Blue;
+  			color: white;
+    		text-decoration: none;
+
+
+		}
+		
+
+		button {
+			
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			margin: auto;
+			flex-wrap: wrap;
+			
+			padding: 10px;
+			
+		}
+
+		img {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			margin: auto;
+			flex-wrap: wrap;
+		}
+
+		a {
+			text-align: center;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<h1> Tip Calculator </h1>
+
+	<nav id="navbar">
+  	
+  		<a href="tipcalculator.html"> Tip Calculator </a>
+  		<a href = wordchar.html> Counter </a>
+  		<a href = "areaofcircle.html"> Circle </a>
+  		
+  	</nav>
+
+
+	<br>
+	<div class="container">
+		<div>
+		
+
+			<p> 
+				Enter the price ($):  
+				<input type="text" id = "total"> 
+			</p>
+		</div>
+		<br><br>
+		<div>
+			
+			<p> 
+				Enter the quality:  
+				<select id ="qual">
+					<option value="0.2"> Outstanding: 20% </option>
+					<option value="0.15"> Very Good: 15% </option>
+					<option value="0.10"> Okay: 10% </option>
+					<option value="0"> Not Good: 0% </option>
+				</select>
+			</p>
+		</div>
+		<br><br>
+		<div>
+
+			<p> 
+				People attending: 
+				<input type="text" id = "attend">
+			</p>
+		</div>
+		<br><br><br>
+		<a href="https://www.newsday.com/lifestyle/family/kidsday/tipping-service-help-1.22607222#:~:text=Giving%20a%20waiter%20or%20waitress,depend%20on%20getting%20a%20tip."> Why is tipping important? </a>
+		<br><br>
+		<div>
+			<button onclick="calculate_tip()"> Submit </button>
+			<br><br>
+		</div>
+		<div id = "tip"> </div> <br>
+		<div id="per"> </div>
+		<img src="money.png" alt="money" width="165" height="165">
+
+
+	</div>
+</body>
+
+<script>
+
+	function calculate_tip() {
+
+		var price0 = document.getElementById("total").value;
+		var quality0 = document.getElementById("qual").value;
+		var people0 = document.getElementById("attend").value;
+		
+		var divobj1 = document.getElementById("tip")
+		var divobj2 = document.getElementById("per")
+		
+
+
+		var price = parseFloat(price0);
+		var quality = parseFloat(quality0);
+		var people = parseFloat(people0);
+		
+		var total = (price*quality);
+		var division = total/people ;
+
+		var rounded_total = Math.round(total*100)/100;
+		var rounded_division = Math.round(division*100)/100;
+
+		divobj1.innerHTML = "The tip that is paid is: $" + rounded_total;
+		divobj2.innerHTML = "Each person should pay: $"+ rounded_division;
+
+	}
+
+
+</script>
+
+
+</html>
