@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Main Page
+	</title>
+
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+  	
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+	
+	<style>
+
+		h1.nav {
+
+			color: white;
+			text-align: center;
+			background-color: #FCC30B;
+			font-weight: bold;
+			font-size: 60pt;
+			display: block;
+
+			
+		}
+
+		nav {
+			overflow: hidden;
+			background-color: #333;
+			margin: 0px;
+			z-index: 1;
+		}
+
+
+
+		nav a{
+
+			float: left;
+			color: white;
+			font-size: 20pt;
+			font-family: Roboto;
+			text-align: center;
+			padding: 14px 16px;
+			margin: 0px;
+			text-decoration: none;
+
+	
+		}
+
+		nav a:hover {
+
+
+			background-color: silver;
+  			color: black;
+  			text-decoration: none;
+
+		}
+
+		nav input {
+			float: right;
+  			padding: 12px 22px;
+  			margin-top: 8px;
+  			margin-bottom: 8px;
+  			margin-right: 16px;
+  			font-size: 17px;
+
+		}
+
+		
+
+		h4 {
+			padding: 16px;
+ 			font-size: 24pt;
+		}
+
+		h4.smallsize {
+			font-size: 20pt;
+		}
+		body {
+			margin: 0;
+			font-family: Roboto;
+		}
+
+
+		img.logo {
+			padding-right: 20px;
+			padding-left: 20px;
+			float: right;
+
+		}
+
+		div.intro_text h3{
+
+			float: center;
+			padding-right: 20px;
+			font-weight: bold;
+
+		}
+
+
+		div.intro_text p {
+
+			font-size: 12pt;
+			padding-right: 20px;
+			padding-left: 20px;
+			
+		}	
+
+		div.intro_img {
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 20px;
+			float: left;
+		}
+
+		div.carousel-inner {
+
+			width: 100%;
+			height: 500px;
+			padding:16px;
+
+
+		}
+
+
+		div.hover {
+  			background-color: transparent;
+  			width: 380px;
+  			height: 500px;
+  			perspective: 1000px; 
+  			float: left;
+  			margin: 50px;
+  			display: flex;
+		}
+
+		div.hover:hover div.inner {
+  			transform: rotateY(180deg);
+		}
+
+		div.inner {
+ 			position: relative;
+  			width: 100%;
+  			height: 100%;
+  			text-align: center;
+  			transition: transform 0.6s;
+  			transform-style: preserve-3d;
+
+  			
+		}
+
+		
+
+		div.front, div.back {
+  			position: absolute;
+  			width: 100%
+  			height: 100%;
+  			-webkit-backface-visibility: hidden;
+  			backface-visibility: hidden;
+		}
+
+
+		div.back {
+  			background-color: #FCC30B;
+  			color: white;
+  			transform: rotateY(180deg);
+  			height: 100%
+  			
+		}
+
+		div.youtube iframe{
+			margin: 35px;
+			
+
+		}
+
+		div.youtube {
+			background-color: #FCC30B;
+		}
+
+		div.solution_intro {
+			color: black;
+			font-family: Roboto;
+			text-align: center;
+			font-size: 40pt;
+			font-weight: bold;
+		}
+		
+
+
+
+		div.sol_text{
+			font-size: 12pt;
+			padding-right: 40px;
+			padding-left: 20px;
+
+		}	
+
+		div.sol_text img {
+			float: right;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		canvas{
+			padding: 20px;
+		
+		}
+
+		div.labels{
+			background-color: #FCC30B;
+			text-align: center;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="navigationheader">
+		
+		<nav id="navbar">
+			<h1 class="nav">  Affordable and Clean Energy </h1>
+			<a class = "active" href="#"> SDG7 </a>
+			<a href = "#"> SDG11 </a>
+			<a href = "#"> Comparison </a>
+
+			<input type="text" placeholder="Search..">
+
+		</nav><br>
+	</div>
+	
+		
+
+	
+	<div class = intro>
+		<div class="intro_img">
+			<img src = "logo_7.jpg" alt = "Goal 7" width = 500 height = 500>
+		</div>
+		<br>
+		<div class="intro_text">
+
+			<h3> 
+			"Ensure access to affordable, reliable, sustainable and modern energy for all" 
+			</h3>
+			<br>
+			<p> Between 2000 and 2018, the number of people posessing electicity increased from 78% to 90%, while the population without electricity dropped to 789 million. </p>
+
+			<p> However, the population continues to grow, and with it, the demand for cheap energy. Greater attention is required in order to ameliorate access to clean and safe cooking fuels and technology for 3 billion people, to widen the utilization of renewable energy, and to increase electrification in sub-Saharan Africa. Furthermore, an economy dependent on fossil fuels is creating dire effects on the climate through greenhouse gas emissions </p>
+
+			<p> Investing in solar, wind, thermal, and other renewable energy sources, ensuring energy for all, as well as improving energy productivity is crucial if our goal is to achieve SDG 7 by 2030. </p>
+
+			<p> Expanding infrastructure and uprgrading technoloby to provide clean, and more efficient energy (which all countries are able to access) will augment growth and assist the environment </p>
+			
+			<p> The COVID-19 pandemic outlined the need for reliable and affordable electricity in healthcare centres. Furthermore, a survery conducted in certain developing countries dictated that that 1/4 of health facilities were not equipped with electricity, and another quarter had unscheduled power outages, which weakened their ability to deliver essential health services, weakening the health system's response to the crisis. </p>
+
+		</div>
+
+	</div>
+	<br><br>
+	
+
+	<div class="youtube">
+
+		<iframe width="640" height="385" src="https://www.youtube.com/embed/7r3rV-laH4M" frameborder="0" allowfullscreen></iframe>
+
+
+		<iframe width="640" height="385" src="https://www.youtube.com/embed/kh5KzBQBGcE" allowfullscreen></iframe>
+	</div>
+
+	<br><br>
+	<div class="solution_intro">
+		<h1 class="solutions"> Solutions Presented to Companies </h1>
+	</div>
+
+	<br><br>
+	<div class="sol_text">
+
+		<img src="clean_cars.jpeg" alt="Cars filling up gas" width="400" height="400">
+		<br>
+		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At risus viverra adipiscing at in tellus integer. Tempor orci dapibus ultrices in. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Vel elit scelerisque mauris pellentesque pulvinar. Urna molestie at elementum eu facilisis sed odio. Lectus proin nibh nisl condimentum id venenatis a condimentum. Nisl pretium fusce id velit ut tortor. </p>
+		<ul>
+			<li> Leo duis ut diam quam. Leo duis ut diam quam nulla porttitor massa. Amet commodo nulla facilisi nullam. </li>
+			<li>Tincidunt dui ut ornare lectus sit amet est. Leo in vitae turpis massa sed elementum. </li>
+
+			<li> Ut ornare lectus sit amet est placerat in egestas. Gravida quis blandit turpis cursus. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. </li>
+			
+			<li> Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Adipiscing elit duis tristique sollicitudin nibh. </li>
+
+			<li> Eget mi proin sed libero enim sed faucibus turpis. Risus nec feugiat in fermentum posuere. </li>
+
+			<li> Mi in nulla posuere sollicitudin aliquam ultrices sagittis. Ornare suspendisse sed nisi lacus sed viverra tellus in. </li>
+		</ul>
+				
+		<p>Amet volutpat consequat mauris nunc congue nisi vitae. Integer feugiat scelerisque varius morbi enim nunc faucibus a. Massa tincidunt dui ut ornare. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Sit amet consectetur adipiscing elit ut aliquam purus. </p>
+		<br>
+
+	</div>
+	<br><br>
+	<div class="labels"><br>
+		<h1 style="color:white;"> Access to Electricity in Several Countries </h1>
+		<h6 style="color: red;"> United States </h6>
+		<h6 style="color: green;"> Afghanistan </h6>
+		<h6 style="color: blue;"> Rwanda </h6>
+	<canvas id="renew" style="position: relative; height:40vh; width:60vw"></canvas><br><br>
+
+	<div class="flip">
+	<div class="hover">
+  		<div class="inner">
+    		<div class="front">
+      			<img src="7_1.png" alt="Target 1" width=380 height=500>
+    		</div>
+    		<div class="back"><br><br>
+      			<h4 class="short"> "By 2030, ensure universal access to affordable, reliable and modern energy services" </h4>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="hover">
+  		<div class="inner">
+    		<div class="front">
+      			<img src="7_2.png" alt="Target 2" width=380 height=500>
+    		</div>
+    		<div class="back"><br><br>
+      			<h4 class="short"> "By 2030, increase substantially the share of renewable energy in the global energy mix" </h4>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="hover">
+  		<div class="inner">
+    		<div class="front">
+      			<img src="7_3.png" alt="Target 3" width=380 height=500>
+    		</div>
+    		<div class="back"><br><br>
+      			<h4 class="short"> By 2030, double the global rate of improvement in energy efficiency </h4>
+    		</div>
+  		</div>
+	</div>
+	<br>
+	<div class="hover">
+  		<div class="inner">
+    		<div class="front">
+      			<img src="7_a.png" alt="Target A" width=380 height=500>
+    		</div>
+    		<div class="back"><br>
+      			<h4 class="smallsize"> "By 2030, enhance international cooperation to facilitate access to clean energy research and technology, including renewable energy, energy efficiency and advanced and cleaner fossil-fuel technology, and promote investment in energy infrastructure and clean energy technology" </h4>
+    		</div>
+  		</div>
+	</div>
+	<div class="hover">
+  		<div class="inner">
+    		<div class="front">
+      			<img src="7_b.png" alt="Target B" width=380 height=500>
+    		</div>
+    		<div class="back"><br>
+      			<h4 class="smallsize"> "By 2030, expand infrastructure and upgrade technology for supplying modern and sustainable energy services for all in developing countries, in particular least developed countries, small island developing States, and land-locked developing countries, in accordance with their respective programmes of support" </h4>
+      			<br>
+    		</div>
+  		</div>
+
+  	<br><br>
+	
+
+	<script>
+		var ctx = document.getElementById('renew').getContext('2d');
+		var xval= [2007,2008,2009,2010,2011,2012,2013,2014,2015,2016];
+		
+
+		new Chart(ctx, {
+  			type: "line",
+  			data: {
+    			labels: xval,
+    			datasets: [{
+    				label: "United States",
+     				data: [100,100,100,100,100,100,100,100,100,100],
+      				borderColor: "red",
+      				fill: false
+    			},{
+    				label: "Afghanistan",
+      				data: [33.75,42.40,44.85,42.70,43.22,69.10,67.26,89.50,71.50,84.14],
+      				borderColor: "green",
+      				fill: false
+    			},{
+    				label: "Rwanda",
+      				data:[11.20,6.00,13.10,9.70,10.80,16.07,15.20,19.80,22.80,29.37] ,
+      				borderColor: "blue",
+      				fill: false
+    			}]
+  				},
+  					options: {
+    					legend: {display: false}
+ 					}
+				})
+
+
+	</script>
+
+
+</body>
+</html>
